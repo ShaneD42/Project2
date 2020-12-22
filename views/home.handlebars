@@ -1,0 +1,71 @@
+<br>
+
+<div class="container-fluid">
+    
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1>Doctor Proctor </h1>
+                    <p>Welcome to Doctor Proctor, a user friendly application that helps you easily find medical profesionals in your area</p>
+            
+                    <br>
+                    <h2> Get Doctors and Services </h2>
+                    <p>To find doctors near you enter your zip code and the type of medical services you are looking for</p>
+                    <br>
+                
+                    <form class="create-form">
+
+                        <div class="input-group">
+                            
+                            <input class="form-control" type="input" placeholder="Zip Code">
+                        
+                        </div>
+                    </form> 
+
+                    <br>
+
+                    <form class="create-form">
+
+                        <div class="input-group">
+                            
+                            <input class="form-control" type="input" placeholder="Dental, emergency clinc, etc">
+                            <br>
+                            <span class="input-group-addon"><button type="submit" class="btn  btn-outline-dark">Search</button></span>
+                        </div>
+
+
+                    </form> 
+                </div> <br>  
+                <div class="col-sm-6" id="docsearch">
+                    <img src="https://i.pinimg.com/originals/ef/3e/b2/ef3eb26dba418b4f9c782c928762af5b.png" alt="doc search img">
+                </div>
+            </div> 
+        </div>        
+
+        
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="doctors"><strong>Doctor Information</strong>
+                    <p> </p>
+                </div>
+                <div class="panel-body">
+
+                    <ul>
+                        {{#each burgers}}
+                        {{#unless devoured}}
+
+                        <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
+                        <button type="button" class="btn btn-outline-success eatB" id="eatbtn" data-id="{{this.id}}"
+                            data-newDevoured="{{devour}}">EAT</button>
+                        <hr>
+                        {{/unless}}
+                        {{/each}}
+                    </ul>
+
+                </div>
+            </div>
+        </div>
