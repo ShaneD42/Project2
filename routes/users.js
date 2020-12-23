@@ -81,6 +81,9 @@ router.post('/register', (req, res) => {
 
 });
 
+
+//After button click router.post("/login") is missing
+=======
 // Login Handle
 router.post('/login', (req, res, next) => {
     passport.authenticate('local', {
@@ -96,5 +99,6 @@ router.get('/logout', (req, res) => {
     req.flash('success_msg', 'You are logged out');
     res.redirect('/users/login');
 });
+
 
 module.exports = router;

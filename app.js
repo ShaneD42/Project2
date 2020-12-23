@@ -7,11 +7,15 @@ const passport = require('passport');
 
 const app = express();
 
+
+const PORT = process.env.PORT || 3000;
+=======
 // Passport config
 require('./config/passport')(passport);
 
 // DB Config
 const mdb = require('./config/keys').MongoURI;
+
 
 // Connect to Mongo
 mongoose.connect(mdb, { useNewUrlParser: true })
@@ -48,10 +52,12 @@ app.use((req, res, next) => {
     next();
 })
 
+
 // Routes
 app.use("/", require("./routes/index"));
 app.use("/users", require("./routes/users"));
 
-const PORT = process.env.PORT || 3000;
+
+
 
 app.listen(PORT, console.log(`Server started on port ${PORT}`));
