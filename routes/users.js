@@ -82,8 +82,8 @@ router.post('/register', (req, res) => {
 });
 
 
-//After button click router.post("/login") is missing
-=======
+//After button click router.post("/login") is missing(roger!)
+
 // Login Handle
 router.post('/login', (req, res, next) => {
     passport.authenticate('local', {
