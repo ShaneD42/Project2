@@ -12,7 +12,8 @@ const db = require('./models');
  
 const PORT = process.env.PORT || 8000;
 const app = express();
-const connection = require('./config/connection');
+//const connection = require('./config/connection');
+
 
 // Passport config
 require('./config/passport')(passport);
@@ -27,10 +28,10 @@ mongoose.connect(mdb, { useNewUrlParser: true })
     .catch(err => console.log(err));
 
 
-connection
-  .authenticate()
-  .then(() => console.log('Database connected...'))
-  .catch(err => console.log('Error: ' + err))
+// connection
+//   .authenticate()
+//   .then(() => console.log('Database connected...'))
+//   .catch(err => console.log('Error: ' + err))
 
 // Handlebars
 
