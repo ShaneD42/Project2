@@ -1,41 +1,45 @@
-<% if(typeof errors != 'undefined') { %>
-    <% errors.forEach(function(error) { %>
+
+{{#if errors}} 
+    {{#each errors}}
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
-            <%= error.msg %>
+             {{ this.msg }}
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
 
         </div>  
-    <% }); %>
-<% } %>
+    {{/each}}
+{{/if}}  
 
-<% if(success_msg != '') { %>
+ {{#if success}}
+    
     <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <%= success_msg %>
+        {{ this.msg }}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
 
     </div> 
-<% } %>
+   
+  {{/if}}  
 
-<% if(error_msg != '') { %>
+
+{{#if error}}
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <%= error_msg %>
+        {{ this.msg }}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
 
     </div> 
-<% } %>
+{{/if}}
 
-<% if(error != '') { %>
+{{#if error}}
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <%= error %>
+       {{ this.msg }}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
 
     </div> 
-<% } %>
+{{/if}}
