@@ -1,5 +1,5 @@
 
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ <nav class="navbar navbar-expand-lg navbar-dark bg-success">
          <div class="container">
         <a class="navbar-brand disabled" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,10 +30,10 @@
     </div>    
   </nav>
   
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <h1 class="display-4">Welcome</h1>
-      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+  <div class="jumbotron jumbotron-fluid bg-success">
+    <div class="container text-dark">
+      <h1 class="display-4">Welcome to Doctor Proctor <i class="fas fa-user-md"></i></h1>
+      <p class="lead">Our goal is to provide you with the best set of options, so you don't feel cheated.</p>
 
     <section id="search" class="search-wrap">
     <h1>Find A Doctor</h1>
@@ -42,10 +42,9 @@
             <form action="/doctors/search" class="search-form form-inline">
                 <div class="form-group">
                     <input class="form-control" type="search" name="term" placeholder="Cardiology, Family Practice,General Surgery, etc...">
-                 
-                  <!-- <button><input type="submit" value="Search"></button>-->
+                    <button type="submit" class="btn btn-primary"  value="Search">Submit</button>
                 </div>   
-                  <button type="submit" class="btn btn-primary mb-2"  value="Search">Submit</button> 
+                   
             </form>
        </div> 
        </div>        
@@ -64,62 +63,62 @@
                 <div class="row">
                     <div class="col-md-4">
                         <ul>
-                            <li><a href="">Cardiology</a></li>
+                            <li><a href="/doctors/search?term=cardiology">Cardiology</a></li>
                         </ul>
                         <ul>
-                            <li><a href="">Dermatology</a></li>
+                            <li><a href="/doctors/search?term=dermatology">Dermatology</a></li>
                         </ul>
                         <ul>
-                            <li><a href="">Family Practice</a></li>
+                            <li><a href="/doctors/search?term=family+practice">Family Practice</a></li>
                         </ul>
                         <ul>
-                            <li><a href="">Gastroenterology</a></li>
+                            <li><a href="/doctors/search?term=gastroenterology">Gastroenterology</a></li>
                         </ul>
                         <ul>
-                            <li><a href="">General Surgery</a></li>
+                            <li><a href="/doctors/search?term=general+surgery">General Surgery</a></li>
                         </ul>
                         <ul>
-                            <li><a href=""> Infectious Disease</a></li>
+                            <li><a href="/doctors/search?term=infectious+disease"> Infectious Disease</a></li>
                         </ul>
                         
                        
                     </div>
                     <div class="col-md-4">
                         <ul>
-                            <li><a href="">Internal Medicine</a></li>
+                            <li><a href="/doctors/search?term=internal+medicine">Internal Medicine</a></li>
                         </ul>
                         <ul>
-                            <li><a href="">Neonatology</a></li>
+                            <li><a href="/doctors/search?term=neonatology">Neonatology</a></li>
                         </ul>
                         <ul>
-                            <li><a href="">Neurology</a></li>
+                            <li><a href="/doctors/search?term=neurology">Neurology</a></li>
                         </ul>
                         <ul>
-                            <li><a href="">Neurosurgery</a></li>
+                            <li><a href="/doctors/search?term=neurosurgery">Neurosurgery</a></li>
                         </ul>
                         <ul>
-                            <li><a href="">Obstetrics & Gynecology</a></li>
+                            <li><a href="/doctors/search?term=obstetrics+&+gynecology">Obstetrics & Gynecology</a></li>
                         </ul>
 
                     </div>
                     <div class="col-md-4">
                         <ul>
-                            <li><a href="">Orthopedics</a></li>
+                            <li><a href="/doctors/search?term=orthopedics">Orthopedics</a></li>
                         </ul>
                         <ul>
-                            <li><a href="">Pediatrics</a></li>
+                            <li><a href="/doctors/search?term=pediatrics">Pediatrics</a></li>
                         </ul>
                         <ul>
-                            <li><a href="">Pediatric Surgery</a></li>
+                            <li><a href="/doctors/search?term=pediatric+surgery">Pediatric Surgery</a></li>
                         </ul>
                         <ul>
-                            <li><a href="">Psychiatry</a></li>
+                            <li><a href="/doctors/search?term=psychiatry">Psychiatry</a></li>
                         </ul>
                         <ul>
-                            <li><a href="">Radiology</a></li>
+                            <li><a href="/doctors/search?term=radiology">Radiology</a></li>
                         </ul>
                         <ul>
-                            <li><a href="">Urology</a></li>
+                            <li><a href="/doctors/search?term=urology">Urology</a></li>
                         </ul>
 
                     </div>
@@ -127,6 +126,9 @@
                 </div>
                 </div>
             </div>
-        </div>    
+        </div> 
+        <div class="col-md-3">
+            <img class="w-100 float-right" src="assets/doctors2.png" alt="doctor gesutring towards options">
+        </div>   
     </div>    
 </div>        
