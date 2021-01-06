@@ -1,0 +1,78 @@
+ <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+         <div class="container">
+        <a class="navbar-brand disabled" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+            <a class="nav-link disabled" href="doctors/welcome">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/">Find-Doctors</a>
+            </li>
+            
+            <li class="nav-item">
+            <a class="nav-link" href="/doctors">Doctors</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/doctors/add">Add Doctors</a>
+            </li>
+           
+            <li>
+                <a href="/users/logout" class="btn btn-outline-secondary">Logout</a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>    
+  </nav>
+
+<section id="add" class="container">
+    <div class="form-wrap">
+      <h1>Add A Doctor <i class="fas fa-notes-medical"></i></h1>
+     <div class="row">
+       <div class="col-md-6">
+          <form action="/doctors/add" method="POST">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input class="form-control" type="text" name="name" id="name" class="input-box" placeholder="eg. Jon Doe"
+                maxlength="100" value={{name}}>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input class="form-control" type="email" name="email" id="email" class="input-box" placeholder="Enter an email" value={{email}}>
+            </div>
+            <div class="form-group">
+              <label for="Phone">Phone</label>
+              <input class="form-control" type="text" name="phone" id="Phone" class="input-box" placeholder="1234567899"
+              maxlength="100" value={{phone}}>
+            </div>
+            <div class="form-group">
+              <label for="city">city</label>
+              <input class="form-control" type="text" name="city" id="city" class="input-box" placeholder="Troy"
+              maxlength="100" value={{city}}>
+            </div>
+            <div class="form-group">
+              <label for="zipcode">zipcode</label>
+              <input class="form-control" type="text" name="zipcode" id="zipcode" class="input-box" placeholder="12345"
+              maxlength="100" value={{zipcode}}>
+            </div>
+            <div class="form-group">
+              <label for="state">state</label>
+              <input class="form-control" type="text" name="state" id="state" class="input-box" placeholder="MI"
+              maxlength="100" value={{state}}>
+            </div>
+            <div class="form-group">
+              <label for="speciality">speciality</label>
+              <input class="form-control" type="text" name="speciality" id="speciality" class="input-box" placeholder="CARDIOLOGY"
+              maxlength="100" value={{speciality}}>
+            </div>
+            
+            <input class="btn btn-light" type="submit" value="Add Doctor" class="btn btn-reverse">
+          </form>
+        </div>
+      </div>    
+    </div>
+  </section>
